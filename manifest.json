@@ -1,0 +1,37 @@
+{
+	"name": "reproin-checker",
+	"label": "Check ReproIn Protocol Names",
+	"description": "Upload a text file with protocol names and this will tell you what the BIDS names would be",
+	"version": "0.0.1_0.1.7",
+	"inputs": {
+		"api-key": {
+			"base": "api-key"
+		},
+		"protocol_names": {
+			"base": "file",
+			"description": "A text file containing your protocol names. One per line.",
+			"optional": false
+		}
+	},
+	"config": {
+		"extended_bids": {
+			"default": true,
+			"description": "Export/Curate all files instead of just func/fmap/anat/dwi",
+			"type": "boolean"
+		}
+	},
+	"command": "./fw_heudiconv_run.py",
+	"author": "Matt Cieslak",
+	"maintainer": "Matt Cieslak",
+	"cite": "",
+	"license": "BSD",
+	"source": "",
+	"url": "https://github.com/PennBBL/reproin-checker",
+	"custom": {
+		"gear-builder": {
+			"category": "analysis",
+			"image": "pennbbl/reproin-checker:0.0.1_0.1.7"
+		},
+		"flywheel":{"suite": "PennBBL"}
+	}
+}
